@@ -7,5 +7,4 @@ change-output.md
 before_commit
 /coverage/
 .idea/
-/dist
 /cli_output/
