@@ -69,7 +69,7 @@
     "testem:ci": "testem ci"
   },
   "optionalDependencies": {
-    "jsdom": "Miggogee/jsdom#napi-canvas/19.0.0",
+    "jsdom": "Miggogee/jsdom#napi-canvas/19.0.0-dist",
     "@napi-rs/canvas": "^0.1.39"
   },
   "devDependencies": {
