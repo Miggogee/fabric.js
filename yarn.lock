@@ -1881,9 +1881,10 @@ js-yaml@^3.13.1, js-yaml@^3.2.5, js-yaml@^3.2.7, js-yaml@^3.9.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
-jsdom@Miggogee/jsdom#napi-canvas/19.0.0-dist:
+jsdom-napi-rs-canvas@19.0.0:
   version "19.0.0"
-  resolved "https://codeload.github.com/Miggogee/jsdom/tar.gz/efb6e466134995d7f7c8a2d13efc94282330a07f"
+  resolved "https://registry.yarnpkg.com/jsdom-napi-rs-canvas/-/jsdom-napi-rs-canvas-19.0.0.tgz#24dc5e68b5e26ca39f0eff8ccd30525df486bf43"
+  integrity sha512-AfG1clHDH7iUMI7PyOkT4rqTKaNeLUxSTzII/KcvPx52pjWqndxAkUx+NMaTKjZYFp2WM2ALw94Eb0fK/dC6iQ==
   dependencies:
     abab "^2.0.5"
     acorn "^8.5.0"
