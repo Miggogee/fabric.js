@@ -34,7 +34,7 @@ QUnit.config.testTimeout = 15000;
 QUnit.config.noglobals = true;
 QUnit.config.hidepassed = true;
 
-var jsdom = require('jsdom');
+var jsdom = require('jsdom-napi-rs-canvas');
 
 // make a jsdom version for tests that does not spam too much.
 class CustomResourceLoader extends jsdom.ResourceLoader {
@@ -46,7 +46,7 @@ class CustomResourceLoader extends jsdom.ResourceLoader {
   }
 }
 
-var jsdom = require('jsdom');
+var jsdom = require('jsdom-napi-rs-canvas');
 var virtualWindow = new jsdom.JSDOM(
   decodeURIComponent('%3C!DOCTYPE%20html%3E%3Chtml%3E%3Chead%3E%3C%2Fhead%3E%3Cbody%3E%3C%2Fbody%3E%3C%2Fhtml%3E'),
   {
@@ -56,8 +56,8 @@ var virtualWindow = new jsdom.JSDOM(
     resources: new CustomResourceLoader(),
   }).window;
 fabric.document = virtualWindow.document;
-fabric.jsdomImplForWrapper = require('jsdom/lib/jsdom/living/generated/utils').implForWrapper;
-fabric.nodeCanvas = require('jsdom/lib/jsdom/utils').Canvas;
+fabric.jsdomImplForWrapper = require('jsdom-napi-rs-canvas/lib/jsdom/living/generated/utils').implForWrapper;
+fabric.nodeCanvas = require('jsdom-napi-rs-canvas/lib/jsdom/utils').Canvas;
 fabric.window = virtualWindow;
 DOMParser = fabric.window.DOMParser;
 
