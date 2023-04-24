@@ -547,6 +547,17 @@
     strokeUniform:              false,
 
     /**
+     * When `false`, the stroke will be counted in shape dimensions
+     * When `true`, stroke width is ignored
+     * @since w2c-fabric 5.3.1
+     * @type Boolean
+     * @default false
+     * @type Boolean
+     * @default false
+     */
+    ignoreStrokeWidth:              false,
+
+    /**
      * When set to `true`, object's cache will be rerendered next render call.
      * since 1.7.0
      * @type Boolean
