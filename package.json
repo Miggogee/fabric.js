@@ -1,8 +1,8 @@
 {
-  "name": "fabric-napi-rs-canvas",
-  "description": "Object model for HTML5 canvas, and SVG-to-canvas parser. Backed by jsdom and @napi-rs/canvas (replacement for node-canvas).",
+  "name": "fabric-w2c",
+  "description": "Fork from fabric.js. Added custom features. Replaved node-canvas with @napi-rs/canvas. ",
   "homepage": "https://github.com/Miggogee/fabric.js",
-  "version": "5.3.1",
+  "version": "5.3.0",
   "author": "Juriy Zaytsev <kangax@gmail.com>",
   "contributors": [
     {
