@@ -632,11 +632,10 @@
       var dimensions, dimX, dimY,
           noSkew = skewX === 0 && skewY === 0;
 
-      if (this.strokeUniform) {
+      if (this.ignoreStrokeWidth || this.strokeUniform) {
         dimX = this.width;
         dimY = this.height;
-      }
-      else {
+      } else {
         dimensions = this._getNonTransformedDimensions();
         dimX = dimensions.x;
         dimY = dimensions.y;
@@ -662,7 +661,7 @@
      * @return {Object} .y finalized height dimension
      */
     _finalizeDimensions: function(width, height) {
-      return this.strokeUniform ?
+      return this.strokeUniform && !this.ignoreStrokeWidth ?
         { x: width + this.strokeWidth, y: height + this.strokeWidth }
         :
         { x: width, y: height };

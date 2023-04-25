@@ -555,7 +555,7 @@
      * @type Boolean
      * @default false
      */
-    ignoreStrokeWidth:              false,
+    ignoreStrokeWidth:              true,
 
     /**
      * When set to `true`, object's cache will be rerendered next render call.

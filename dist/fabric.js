@@ -14988,6 +14988,17 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
     strokeUniform:              false,
 
     /**
+     * When `false`, the stroke will be counted in shape dimensions
+     * When `true`, stroke width is ignored
+     * @since w2c-fabric 5.3.1
+     * @type Boolean
+     * @default false
+     * @type Boolean
+     * @default false
+     */
+    ignoreStrokeWidth:              true,
+
+    /**
      * When set to `true`, object's cache will be rerendered next render call.
      * since 1.7.0
      * @type Boolean
@@ -17340,11 +17351,10 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
       var dimensions, dimX, dimY,
           noSkew = skewX === 0 && skewY === 0;
 
-      if (this.strokeUniform) {
+      if (this.ignoreStrokeWidth || this.strokeUniform) {
         dimX = this.width;
         dimY = this.height;
-      }
-      else {
+      } else {
         dimensions = this._getNonTransformedDimensions();
         dimX = dimensions.x;
         dimY = dimensions.y;
@@ -17370,7 +17380,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, /** @lends fabric.Stati
      * @return {Object} .y finalized height dimension
      */
     _finalizeDimensions: function(width, height) {
-      return this.strokeUniform ?
+      return this.strokeUniform && !this.ignoreStrokeWidth ?
         { x: width + this.strokeWidth, y: height + this.strokeWidth }
         :
         { x: width, y: height };
