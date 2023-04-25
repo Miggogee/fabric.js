@@ -19,11 +19,11 @@
 [![Bountysource](https://api.bountysource.com/badge/tracker?tracker_id=23217)](https://www.bountysource.com/trackers/23217-fabric-js?utm_source=23217&utm_medium=shield&utm_campaign=TRACKER_BADGE)
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=kangax&url=http://github.com/kangax/fabric.js&title=Fabric.js&language=&tags=github&category=software)
 
-**Fabric.js with @napi-rs/canvas**
+**Fabric.js-w2c**
 
-This is for of fabric.js where I have replaced node-canvas module with @napi-rs/canvas. As result it does not need canvas rebuilding with node-gyp and works with latest electron node.js backend.
+This is fork of fabric.js where I have replaced node-canvas module with @napi-rs/canvas. As result it does not need canvas rebuilding with node-gyp and works with latest electron node.js backend.
 
-Also, I have made some modifications to fabric.js itself. I have added 
+Also, I have made some modifications to fabric.js itself. I have added ignoreStrokeWidth property to objects which ignores strokeWidth when calculating object dimensions.
 
 **Fabric.js** is a framework that makes it easy to work with HTML5 canvas element. It is an **interactive object model** on top of canvas element. It is also an **SVG-to-canvas parser**.
 
