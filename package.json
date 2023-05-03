@@ -2,7 +2,7 @@
   "name": "fabric-w2c",
   "description": "Fork from fabric.js. Added custom features. Replaved node-canvas with @napi-rs/canvas. ",
   "homepage": "https://github.com/Miggogee/fabric.js",
-  "version": "5.3.0",
+  "version": "5.3.1",
   "author": "Juriy Zaytsev <kangax@gmail.com>",
   "contributors": [
     {
